@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-primary: 'Be Vietnam Pro', sans-serif;
+    --font-korean: 'Noto Sans KR', sans-serif;
+    --font-pixel: 'Silkscreen', 'Press Start 2P', monospace;
+  }
+
+  body {
+    font-family: 'Be Vietnam Pro', 'Noto Sans KR', sans-serif;
+    color: #2b2327;
+    background-color: #fce7f3;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* 2000s custom retro scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fdf2f8;
+    border-left: 1px solid #f472b6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #ec4899;
+    border: 1px solid #be185d;
+    box-shadow: inset 1px 1px 0px #fbcfe8, inset -1px -1px 0px #9d174d;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #db2777;
+  }
+}
+
+/* 2000s Korean Internet Patterns */
+.bg-retro-stars {
+  background-color: #fdf2f8;
+  background-image: 
+    radial-gradient(#f472b6 0.75px, transparent 0.75px), 
+    radial-gradient(#60a5fa 0.75px, #fdf2f8 0.75px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.bg-retro-checker {
+  background-color: #fce7f3;
+  background-image: 
+    linear-gradient(45deg, #fbcfe8 25%, transparent 25%), 
+    linear-gradient(-45deg, #fbcfe8 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #fbcfe8 75%), 
+    linear-gradient(-45deg, transparent 75%, #fbcfe8 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+.bg-miniroom-wall {
+  background-color: #fef08a;
+  background-image: 
+    repeating-linear-gradient(0deg, #fde047, #fde047 2px, #fef08a 2px, #fef08a 24px);
+}
+
+.bg-miniroom-floor {
+  background-color: #fed7aa;
+  background-image: 
+    repeating-linear-gradient(45deg, #fdba74, #fdba74 8px, #fed7aa 8px, #fed7aa 24px);
+}
+
+/* 3D Cyworld / Retro Window Bevels */
+.retro-window-frame {
+  box-shadow: 
+    3px 3px 0px #00000030,
+    inset 1px 1px 0px #ffffff,
+    inset -1px -1px 0px #9d174d;
+}
+
+.retro-panel-3d {
+  box-shadow: 
+    inset 1px 1px 0px #ffffff,
+    inset -1px -1px 0px #cbd5e1;
+}
+
+.retro-sunken-3d {
+  box-shadow: 
+    inset 2px 2px 0px #94a3b8,
+    inset -1px -1px 0px #ffffff;
+}
+
+.retro-btn-3d {
+  box-shadow: 
+    inset 1px 1px 0px #ffffff,
+    inset -1px -1px 0px #00000060,
+    1px 1px 0px #00000040;
+}
+
+.retro-btn-3d:active {
+  box-shadow: 
+    inset 1px 1px 0px #00000060,
+    inset -1px -1px 0px #ffffff;
+  transform: translate(1px, 1px);
+}
+
+/* Cute dotted borders */
+.border-dotted-pink {
+  border-style: dotted;
+  border-color: #f472b6;
+  border-width: 2px;
+}
+
+.border-dotted-blue {
+  border-style: dotted;
+  border-color: #60a5fa;
+  border-width: 2px;
+}
+
+/* Pixel Font Helper */
+.font-pixel {
+  font-family: 'Silkscreen', 'Press Start 2P', monospace;
+}
+
+.font-korean {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* Retro blinking cursor / status */
+@keyframes retro-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+.animate-retro-blink {
+  animation: retro-blink 1.2s infinite;
+}
+
+/* Gentle float */
+@keyframes gentle-bob {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-4px); }
+}
+
+.animate-gentle-bob {
+  animation: gentle-bob 2.5s ease-in-out infinite;
+}
+
+/* CD spin animation */
+@keyframes cd-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-cd-spin {
+  animation: cd-spin 3s linear infinite;
+}
+
+.cd-paused {
+  animation-play-state: paused;
+}

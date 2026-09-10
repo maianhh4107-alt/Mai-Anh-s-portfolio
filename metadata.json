@@ -1,0 +1,6 @@
+{
+  "name": "Nguyễn Mai Anh - Mini Homepage",
+  "description": "Nostalgic 2000s Korean mini-homepage and personal portfolio of Nguyễn Mai Anh",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
